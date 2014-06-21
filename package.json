@@ -1,0 +1,29 @@
+{
+  "name": "beth-portfolio",
+  "version": "0.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-angular-templates": "^0.5.5",
+    "grunt-bower-concat": "^0.2.4",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-loopback-angular": "^1.1.0"
+  },
+  "dependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deslee/beth-portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deslee/beth-portfolio/issues"
+  },
+  "homepage": "https://github.com/deslee/beth-portfolio"
+}
