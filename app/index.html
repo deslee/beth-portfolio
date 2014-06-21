@@ -12,11 +12,22 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-<h1>test</h1>
+
+<ng-include src="'portfolio/nav.html'"></ng-include>
+
 <ng-view></ng-view>
+
 <script src="vendor.js"></script>
 <script src="app.js"></script>
 <script src="templates.js"></script>
+<script>
+    try {
+        angular.bootstrap(document, ['app']);
+    }
+    catch (e) {
+        console.error(e.stack || e.message || e);
+    }
+</script>
 </body>
 
 </html>

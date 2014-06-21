@@ -40,7 +40,7 @@ module.exports = function (grunt) {
                 dest: './build/style.css'
             },
             vendorCss: {
-                src: ['./bower_components/**/*.css', '!./bower_components/**/*.min.css'],
+                src: ['./bower_components/**/*.css', './bower_components/**/foundation.css', '!./bower_components/**/*.min.css'],
                 dest: './build/vendor.css'
             }
         },
@@ -49,6 +49,12 @@ module.exports = function (grunt) {
                 // apparently expand is needed for cwd...
                 files: [
                     {expand: true, cwd: 'app', src: ['index.html'], dest: 'build/', filter: 'isFile'}
+                ]
+            },
+            images: {
+                // apparently expand is needed for cwd...
+                files: [
+                    {expand: true, cwd: 'app', src: ['**/*.jpg','**/*.png','**/*.gif'], dest: 'build/', filter: 'isFile'}
                 ]
             }
         },
@@ -85,10 +91,10 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('default', [
-        'loopback_angular', 'bower_concat', 'ngtemplates', 'concat', 'copy', 'watch'
+        'bower_concat', 'ngtemplates', 'concat', 'copy', 'watch'
     ]);
 
-    grunt.registerTask('all', [
-        'default', 'docular',
+    grunt.registerTask('loopback', [
+        'loopback_angular', 'docular',
     ])
 };
